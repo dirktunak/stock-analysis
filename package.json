@@ -2,7 +2,7 @@
     "name": "stock-analysis",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://gitname.github.io/react-gh-pages",
+    "homepage": "http://dirktunak.github.io/react-gh-pages",
     "dependencies": {
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
