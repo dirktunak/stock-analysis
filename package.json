@@ -5,7 +5,7 @@
     "homepage": "http://dirktunak.github.io/react-gh-pages",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --open --mode development",
+        "start": "webpack-dev-server",
         "build": "webpack --mode production",
         "test": "jest",
         "jest": "jest",
@@ -16,7 +16,6 @@
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
-        "@babel/polyfill": "^7.4.4",
         "lodash": "^4.17.11",
         "react": "^16.8.6",
         "react-dom": "^16.8.6"
