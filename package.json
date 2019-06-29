@@ -16,7 +16,7 @@
         "build": "webpack --mode production",
         "test": "jest",
         "jest": "jest",
-        "predeploy": "npm run build",
+        "predeploy": "npm run jest && npm run build",
         "deploy": "gh-pages -d build"
     },
     "devDependencies": {
