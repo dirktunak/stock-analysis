@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build')
     },
     module: {
         rules :[
@@ -13,6 +13,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
             }
         ]
     },
@@ -24,7 +28,8 @@ module.exports = {
     devServer: {
         open: true,
         hot: true,
-        inline: true
+        inline: true,
+        openPage: 'build'
     },
     devtool: 'source-map'
 };
