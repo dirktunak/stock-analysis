@@ -1,11 +1,10 @@
 import React from 'react'
+import StockOverview from './common/stockOverview'
 
 function App() {
     return (
         <div className='App'>
-            <header className='App-header'>
-                <p>asdf</p>
-            </header>
+            <StockOverview ticker={'APPL'} />
         </div>
     )
 }
