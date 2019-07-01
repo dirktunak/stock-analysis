@@ -1,7 +1,29 @@
 @import './*/*.less';
 
-@bg: grey;
+.App {
+    text-align: center;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    background-color: #282c34;
+}
 
-div {
-    background: @bg;
+.Stock {
+    display: flex;
+    border-style: solid;
+    border-width: 2px 4px;
+}
+
+.Stock > div {
+    flex: 1;
+    margin: calc(10px + 2vmin);
+    padding: calc(10px + 2vmin);
+    font-size: calc(10px + 2vmin);
+}
+
+.Stock[color='green'] {
+    background-color: #2ad622;
+}
+
+.Stock[color='red'] {
+    background-color: #e62727;
 }
