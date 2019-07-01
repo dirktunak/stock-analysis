@@ -1,10 +1,12 @@
 import React from 'react'
-import StockOverview from './common/stockOverview'
+import WatchList from './watchlist/watchlist'
+
+import { usersListOfTickers } from './common/testData'
 
 function App() {
     return (
         <div className='App'>
-            <StockOverview ticker={'APPL'} />
+            <WatchList listOfTicker={usersListOfTickers} />
         </div>
     )
 }

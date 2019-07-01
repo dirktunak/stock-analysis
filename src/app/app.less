@@ -7,14 +7,23 @@
     background-color: #282c34;
 }
 
-.StockOverview {
+.Stock {
     display: flex;
-    justify-content: space-evenly;
+    border-style: solid;
+    border-width: 2px 4px;
 }
 
-.StockOverview > div {
-    background-color: #00ff15;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+.Stock > div {
+    flex: 1;
+    margin: calc(10px + 2vmin);
+    padding: calc(10px + 2vmin);
+    font-size: calc(10px + 2vmin);
+}
+
+.Stock[color='green'] {
+    background-color: #2ad622;
+}
+
+.Stock[color='red'] {
+    background-color: #e62727;
 }

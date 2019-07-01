@@ -1,12 +1,22 @@
 import React from 'react'
-import StockOverview from '../common/stockOverview'
+import PropTypes from 'prop-types'
+
+import Stock from '../common/stock'
 
 function WatchList(props) {
-    return (
-        <div>
-            <StockOverview />
-        </div>
-    )
+    const createWatchList = data => {
+        const table = []
+        Object.keys(data).forEach(ticker => {
+            table.push(<Stock key={ticker} ticker={ticker} />)
+        })
+        return table
+    }
+
+    return <div className='watchList'>{createWatchList(props.listOfTicker)}</div>
+}
+
+WatchList.propTypes = {
+    listOfTicker: PropTypes.object.isRequired
 }
 
 export default WatchList

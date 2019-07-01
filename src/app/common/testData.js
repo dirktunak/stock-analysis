@@ -37,7 +37,7 @@ export const testData = {
         ceo: '',
         employees: ''
     },
-    APPL: {
+    AAPL: {
         symbol: 'AAPL',
         exchange: 'NASDAQ',
         name: 'Apple Inc.',
@@ -151,4 +151,11 @@ export const testData = {
         ceo: 'Amanda W. Ginsberg',
         employees: '1500'
     }
+}
+
+export const usersListOfTickers = {
+    AAPL: 1,
+    SPY: 1,
+    COF: 1,
+    MTCH: 1
 }
