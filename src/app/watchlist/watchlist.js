@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Stock from '../common/stock'
+import Stock from './stock'
 
 function WatchList(props) {
     const createWatchList = data => {

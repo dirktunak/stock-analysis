@@ -30,7 +30,7 @@ module.exports = {
         open: true,
         hot: true,
         inline: true,
-        openPage: 'build'
+        openPage: ''
     },
     devtool: 'source-map'
 }
