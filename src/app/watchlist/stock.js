@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import ChangePercent from './changePercent'
-import Ticker from './ticker'
 import Chart from './chart'
+import Ticker from './ticker'
 import { testData } from '../common/testData'
 import { numberColor } from './services'
 

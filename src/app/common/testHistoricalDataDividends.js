@@ -1,4 +1,4 @@
-const dividends = {
+export const dividends = {
     AAPL: [
         {
             exDate: '2019-05-24',

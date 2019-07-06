@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 
 import Login from '../profile/login'
 import Signup from '../profile/signup'
