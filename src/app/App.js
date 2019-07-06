@@ -9,7 +9,7 @@ import Logout from './profile/logout'
 function App() {
     return (
         <div className='App'>
-            {/* <WatchList listOfTicker={usersListOfTickers} /> */}
+            <WatchList listOfTicker={usersListOfTickers} />
             <Login />
             <Signup />
             <Logout />
