@@ -22,7 +22,13 @@ function Form(props) {
                 'Content-Type': 'application/json'
             }
         }).then(body => {
-            console.log(body)
+            const { jwt, error } = body
+            if(jwt){
+                console.log('jwt', jwt)
+            }
+            if(error){
+                console.log('error', error)
+            }
         })
     }
 
