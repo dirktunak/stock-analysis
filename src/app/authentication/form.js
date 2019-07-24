@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
 
 import wrappedFetch from '../common/wrappedFetch'
 import { backendURL } from '../common/constants'
 
-function Form(props) {
+import { setJWT } from './authentication.action'
+
+const Form = props => {
     const [username, setUsername] = useState('testuser')
     const [password, setPassword] = useState('testuserpassword')
+    const dispatch = useDispatch()
 
     const handleSubmit = evt => {
         evt.preventDefault()
@@ -23,10 +27,12 @@ function Form(props) {
             }
         }).then(body => {
             const { jwt, error } = body
-            if(jwt){
-                console.log('jwt', jwt)
+
+            if (jwt) {
+                dispatch(setJWT(jwt))
             }
-            if(error){
+            if (error) {
+                // eslint-disable-next-line no-console
                 console.log('error', error)
             }
         })

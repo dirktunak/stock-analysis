@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
 
-import Login from '../profile/login'
-import Signup from '../profile/signup'
+import Login from '../authentication/login'
+import Signup from '../authentication/signup'
 
 function Navigation() {
     return (
