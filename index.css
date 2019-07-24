@@ -4,6 +4,16 @@
   font-size: calc(10px + 2vmin);
   background-color: #282c34;
 }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(12px + 4vmin);
+}
 .Stock {
   display: flex;
   border-style: solid;
