@@ -1,20 +1,23 @@
 import React from 'react'
+import { Link, Route, BrowserRouter } from 'react-router-dom'
 
-import { usersListOfTickers } from './common/testData'
-import WatchList from './watchlist/watchlist'
+import Home from './home/home'
 import Login from './authentication/login'
 import Signup from './authentication/signup'
-import Logout from './authentication/logout'
 
-function App() {
+function Navigation() {
     return (
-        <div className='App'>
-            <WatchList listOfTicker={usersListOfTickers} />
-            <Login />
-            <Signup />
-            <Logout />
+        <div>
+            <BrowserRouter>
+                <Link to='/'>Home</Link>
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Signup</Link>
+                <Route path='/' exact component ={Home}/>
+                <Route path='/login' component={Login} />
+                <Route path='/signup' component={Signup} />
+            </BrowserRouter>
         </div>
     )
 }
 
-export default App
+export default Navigation
