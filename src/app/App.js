@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Link, Route } from 'react-router-dom'
 
 import Home from './home/home'
 import Login from './authentication/login'
@@ -12,7 +12,7 @@ function Navigation() {
                 <Link to='/'>Home</Link>
                 <Link to='/login'>Login</Link>
                 <Link to='/signup'>Signup</Link>
-                <Route path='/' exact component ={Home}/>
+                <Route path='/' exact component={Home} />
                 <Route path='/login' component={Login} />
                 <Route path='/signup' component={Signup} />
             </BrowserRouter>

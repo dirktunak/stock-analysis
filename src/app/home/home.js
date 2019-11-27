@@ -11,6 +11,6 @@ function App() {
             <WatchList listOfTicker={usersListOfTickers} />
         </div>
     )
-}   
+}
 
 export default App
