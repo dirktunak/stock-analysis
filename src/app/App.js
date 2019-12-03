@@ -24,11 +24,11 @@ function Navigation() {
     return (
         <StyledApp>
             <BrowserRouter>
-            <FlexContainer justifyContent={'space-evenly'}>
-                <StyledLink to='/stock-analysis'>Home</StyledLink>
-                <StyledLink to='/login'>Login</StyledLink>
-                <StyledLink to='/signup'>Signup</StyledLink>
-            </FlexContainer>
+                <FlexContainer justifyContent={'space-evenly'}>
+                    <StyledLink to='/stock-analysis'>Home</StyledLink>
+                    <StyledLink to='/login'>Login</StyledLink>
+                    <StyledLink to='/signup'>Signup</StyledLink>
+                </FlexContainer>
                 <Route path='/' exact component={Home} />
                 <Route path='/stock-analysis' exact component={Home} />
 
