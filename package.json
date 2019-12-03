@@ -26,7 +26,8 @@
         "react-router-dom": "^5.0.1",
         "redux": "^4.0.4",
         "redux-devtools-extension": "^2.13.8",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "styled-components": "^4.4.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.5.0",
@@ -44,6 +45,7 @@
         "@babel/preset-react": "^7.0.0",
         "babel-eslint": "^10.0.2",
         "babel-loader": "^8.0.6",
+        "babel-plugin-styled-components": "^1.10.6",
         "css-loader": "^3.0.0",
         "eslint": "^5.16.0",
         "eslint-config-airbnb": "^17.1.0",
