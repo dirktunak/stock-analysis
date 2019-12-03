@@ -10,11 +10,10 @@
         "build:dev": "webpack --mode development",
         "test": "jest",
         "jest": "jest",
-        "less": "lessc --glob ./src/app/app.less ./build/index.css",
         "lint": "eslint 'src/**/*.js'",
         "lint:fix": "eslint 'src/**/*.js' --fix",
-        "pre": "npm run less && npm run lint:fix && npm run jest && npm run build:dev",
-        "predeploy": "npm run less && npm run lint:fix && npm run jest && npm run build",
+        "pre": "npm run lint:fix && npm run jest && npm run build:dev",
+        "predeploy": "npm run lint:fix && npm run jest && npm run build",
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
@@ -56,8 +55,6 @@
         "eslint-plugin-react": "^7.13.0",
         "gh-pages": "^2.0.1",
         "jest": "^24.8.0",
-        "less": "^3.9.0",
-        "less-plugin-glob": "^3.0.0",
         "prettier": "^1.18.2",
         "redux-devtools": "^3.5.0",
         "style-loader": "^0.23.1",
