@@ -1,6 +1,6 @@
 export const decimalPlaces = 2
 export const colors = {
-    RED: 'red',
-    GREEN: 'green'
+    RED: '#e62727',
+    GREEN: '#2ad622'
 }
 export const backendURL = 'http://localhost:3000'

@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import FlexText from '../styled/FlexText'
 
 function Ticker(props) {
-    return <div>{props.ticker}</div>
+    return <FlexText>{props.ticker}</FlexText>
 }
 
 Ticker.propTypes = {
