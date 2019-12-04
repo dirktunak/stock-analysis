@@ -23,6 +23,7 @@ module.exports = {
     mode: 'development',
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
+        historyApiFallback: true,
         open: true,
         hot: true,
         inline: true,

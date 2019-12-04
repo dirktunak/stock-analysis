@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import ChangePercent from './changePercent'
 import Chart from './chart'
 import Ticker from './ticker'
-import { testData } from '../common/testData'
+import { testData } from '../../common/testData'
 import { numberColor } from './services'
 
 const StyledStock = styled.div`
