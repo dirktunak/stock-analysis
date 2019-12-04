@@ -1,5 +1,5 @@
 import { addPlusIfPositive, isNegative, numberColor } from './services'
-import { colors } from '../../common/constants'
+import { colors } from '../styled/style.constants'
 
 describe('services', () => {
     describe('addPlusIfPositive', () => {

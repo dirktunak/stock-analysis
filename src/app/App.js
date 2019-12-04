@@ -1,26 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, Route, Router } from 'react-router-dom'
+import { Route, Router } from 'react-router-dom'
+import { isUndefined } from 'lodash'
 
 import history from '../history'
 
 import FlexContainer from './styled/FlexContainer'
+import StyledLink from './styled/StyledLink'
 import AddStock from './authentication/addStock'
 import Home from './home/home'
-import Login from './authentication/login'
-import Signup from './authentication/signup'
+import SignIn from './authentication/signin'
+import SignUp from './authentication/signup'
+import SignOut from './authentication/signout'
 
 const StyledApp = styled.div`
     text-align: center;
     min-height: 100vh;
     font-size: calc(18px + 2vmin);
     background-color: #282c34;
-`
-
-const StyledLink = styled(Link)`
-    display: flex;
-    text-decoration: none;
-    color: white;
+    padding: 4px 0px;
 `
 
 function App() {
@@ -29,15 +27,19 @@ function App() {
             <Router history={history}>
                 <FlexContainer justifyContent={'space-evenly'}>
                     <StyledLink to='/stock-analysis'>Home</StyledLink>
-                    <StyledLink to='/login'>Login</StyledLink>
-                    <StyledLink to='/signup'>Signup</StyledLink>
+                    {isUndefined(window.localStorage.jwt) ? (
+                        <StyledLink to='/signin'>Sign In/Sign Up</StyledLink>
+                    ) : (
+                        <StyledLink to='/signout'>Sign Out</StyledLink>
+                    )}
                     <StyledLink to='/addstock'>Add Stock</StyledLink>
                 </FlexContainer>
                 <Route path='/' exact component={Home} />
                 <Route path='/stock-analysis' exact component={Home} />
 
-                <Route path='/login' component={Login} />
-                <Route path='/signup' component={Signup} />
+                <Route path='/signin' component={SignIn} />
+                <Route path='/signup' component={SignUp} />
+                <Route path='/signout' component={SignOut} />
                 <Route path='/addstock' component={AddStock} />
             </Router>
         </StyledApp>
