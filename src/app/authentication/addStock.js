@@ -1,26 +1,11 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
 import history from '../../history'
-import wrappedFetch from '../../common/wrappedFetch'
+import { wrappedJWTFetch } from '../../common/wrappedFetch'
 import { backendURL } from '../../common/constants'
 
-const StyledInput = styled.input`
-    padding: 0.5em;
-    margin: 0.5em;
-    border: none;
-    border-radius 3px;
-    background-color: #121212;
-    color: rgba(255, 255, 255, 0.7);
-`
-
-const StyledButton = styled.button`
-    font-size: 0.5em;
-    padding: 0.25em 1em;
-    border-radius: 3px;
-    background-color: #121212;
-    color: rgba(255, 255, 255, 0.7);
-`
+import StyledButton from '../styled/StyledButton'
+import StyledInput from '../styled/StyledInput'
 
 function AddStock() {
     const [stock, setStock] = useState('')
@@ -30,15 +15,7 @@ function AddStock() {
         const data = {
             stock
         }
-        wrappedFetch(`${backendURL}/addStock`, {
-            method: 'post',
-            body: JSON.stringify(data),
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                Authorization: jwt
-            }
-        })
+        wrappedJWTFetch(`${backendURL}/addStock`, data)
             .then(body => {
                 // eslint-disable-next-line no-console
                 console.log(body)
@@ -58,7 +35,7 @@ function AddStock() {
         )
     }
 
-    history.push('/login')
+    history.push('/signin')
     return null
 }
 
