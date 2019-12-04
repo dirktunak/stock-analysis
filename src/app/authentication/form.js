@@ -13,7 +13,7 @@ import FlexText from '../styled/FlexText'
 import FlexContainer from '../styled/FlexContainer'
 import { colors } from '../styled/style.constants'
 
-const borderRadius='15px'
+const borderRadius = '15px'
 
 const Form = () => {
     const [username, setUsername] = useState('testuser')
@@ -47,7 +47,11 @@ const Form = () => {
 
     return (
         <LoginSignUp borderRadius='5px'>
-            <FlexContainer flexDirection='column' padding='1em' backgroundColor={colors.WHITE} borderRadius={`${borderRadius} 0px 0px ${borderRadius}`}>
+            <FlexContainer
+                flexDirection='column'
+                padding='1em'
+                backgroundColor={colors.WHITE}
+                borderRadius={`${borderRadius} 0px 0px ${borderRadius}`}>
                 <FlexText>Sign In</FlexText>
                 <StyledInput
                     type='text'
@@ -63,7 +67,11 @@ const Form = () => {
                 />
                 <StyledButton onClick={() => onClick('signin')}>Sign In</StyledButton>
             </FlexContainer>
-            <FlexContainer flexDirection='column' padding='1em' backgroundColor={colors.GREEN} borderRadius={`0px ${borderRadius} ${borderRadius} 0px`}>
+            <FlexContainer
+                flexDirection='column'
+                padding='1em'
+                backgroundColor={colors.GREEN}
+                borderRadius={`0px ${borderRadius} ${borderRadius} 0px`}>
                 <FlexText>Sign Out</FlexText>
                 <StyledInput
                     type='text'
