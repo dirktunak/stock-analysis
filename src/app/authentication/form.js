@@ -29,7 +29,6 @@ const Form = props => {
             if (jwt) {
                 window.localStorage.setItem('jwt', jwt)
                 history.push('/')
-
             }
             if (error) {
                 // eslint-disable-next-line no-console

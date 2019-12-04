@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 
 function AddStock() {
     const [stock, setStock] = useState('')
-    const jwt = window.localStorage.jwt
+    const { jwt } = window.localStorage
 
     const onClick = () => {
         const data = {
@@ -37,25 +37,29 @@ function AddStock() {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 Authorization: jwt
-            },
-        }).then(body => {
-            console.log(body)
-        }).catch(error => {
-            // eslint-disable-next-line no-console
-            console.error(error)
+            }
         })
+            .then(body => {
+                // eslint-disable-next-line no-console
+                console.log(body)
+            })
+            .catch(error => {
+                // eslint-disable-next-line no-console
+                console.error(error)
+            })
     }
 
-    if(jwt){
-        return <div>
-            <StyledInput value={stock} onChange={e => setStock(e.target.value)}></StyledInput>
-            <StyledButton onClick={onClick}>Add Stock</StyledButton>
-        </div>
+    if (jwt) {
+        return (
+            <div>
+                <StyledInput value={stock} onChange={e => setStock(e.target.value)}></StyledInput>
+                <StyledButton onClick={onClick}>Add Stock</StyledButton>
+            </div>
+        )
     }
-    else{
-        history.push('/login')
-        return null
-    }
+
+    history.push('/login')
+    return null
 }
 
 export default AddStock

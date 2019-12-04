@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Router, Link, Route } from 'react-router-dom'
+import { Link, Route, Router } from 'react-router-dom'
 
 import history from '../history'
 
