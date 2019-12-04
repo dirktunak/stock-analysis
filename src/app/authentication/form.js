@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch } from 'react-redux'
 
-import wrappedFetch from '../common/wrappedFetch'
-import { backendURL } from '../common/constants'
+import history from '../../history'
 
-import { setJWT } from './authentication.action'
+import wrappedFetch from '../../common/wrappedFetch'
+import { backendURL } from '../../common/constants'
 
 const Form = props => {
     const [username, setUsername] = useState('testuser')
     const [password, setPassword] = useState('testuserpassword')
-    const dispatch = useDispatch()
 
     const handleSubmit = evt => {
         evt.preventDefault()
@@ -29,7 +27,8 @@ const Form = props => {
             const { jwt, error } = body
 
             if (jwt) {
-                dispatch(setJWT(jwt))
+                window.localStorage.setItem('jwt', jwt)
+                history.push('/')
             }
             if (error) {
                 // eslint-disable-next-line no-console

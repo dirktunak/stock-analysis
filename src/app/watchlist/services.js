@@ -1,4 +1,4 @@
-import { colors } from '../common/constants'
+import { colors } from '../../common/constants'
 
 export const isNegative = number => {
     return number < 0
