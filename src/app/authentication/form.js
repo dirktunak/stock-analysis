@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import history from '../../history'
 
 import { wrappedFetch } from '../../common/wrappedFetch'
-import { backendURL } from '../../common/constants'
+import { backendURL, frontendURL } from '../../common/constants'
 
 import LoginSignUp from '../styled/LoginSignUp'
 import StyledButton from '../styled/StyledButton'
@@ -36,7 +36,7 @@ const Form = () => {
 
             if (jwt) {
                 window.localStorage.setItem('jwt', jwt)
-                history.push('/')
+                history.push(frontendURL.HOME)
             }
             if (error) {
                 // eslint-disable-next-line no-console

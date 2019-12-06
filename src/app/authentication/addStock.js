@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import history from '../../history'
 import { wrappedJWTFetch } from '../../common/wrappedFetch'
-import { backendURL } from '../../common/constants'
+import { backendURL, frontendURL } from '../../common/constants'
 
 import StyledButton from '../styled/StyledButton'
 import StyledInput from '../styled/StyledInput'
@@ -35,7 +35,7 @@ function AddStock() {
         )
     }
 
-    history.push('/signin')
+    history.push(frontendURL.SIGN_IN)
     return null
 }
 

@@ -13,6 +13,8 @@ import SignIn from './authentication/signin'
 import SignUp from './authentication/signup'
 import SignOut from './authentication/signout'
 
+import { frontendURL } from '../common/constants'
+
 const StyledApp = styled.div`
     text-align: center;
     min-height: 100vh;
@@ -26,21 +28,20 @@ function App() {
         <StyledApp>
             <Router history={history}>
                 <FlexContainer justifyContent={'space-evenly'}>
-                    <StyledLink to='/stock-analysis'>Home</StyledLink>
+                    <StyledLink to={frontendURL.HOME}>Home</StyledLink>
                     {isUndefined(window.localStorage.jwt) ? (
-                        <StyledLink to='/signin'>Sign In/Sign Up</StyledLink>
+                        <StyledLink to={frontendURL.SIGN_IN}>Sign In/Sign Up</StyledLink>
                     ) : (
-                        <StyledLink to='/signout'>Sign Out</StyledLink>
+                        <StyledLink to={frontendURL.SIGN_OUT}>Sign Out</StyledLink>
                     )}
-                    <StyledLink to='/addstock'>Add Stock</StyledLink>
+                    <StyledLink to={frontendURL.ADD_STOCK}>Add Stock</StyledLink>
                 </FlexContainer>
-                <Route path='/' exact component={Home} />
-                <Route path='/stock-analysis' exact component={Home} />
+                <Route path={frontendURL.HOME} exact component={Home} />
 
-                <Route path='/signin' component={SignIn} />
-                <Route path='/signup' component={SignUp} />
-                <Route path='/signout' component={SignOut} />
-                <Route path='/addstock' component={AddStock} />
+                <Route path={frontendURL.SIGN_IN} component={SignIn} />
+                <Route path={frontendURL.SIGN_UP} component={SignUp} />
+                <Route path={frontendURL.SIGN_OUT} component={SignOut} />
+                <Route path={frontendURL.ADD_STOCK} component={AddStock} />
             </Router>
         </StyledApp>
     )
